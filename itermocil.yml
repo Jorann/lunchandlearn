@@ -1,0 +1,8 @@
+windows:
+  - name: LunchAndLearnJoran
+    root: ~
+    pre: cwd=$(pwd)
+    layout: main-vertical-flipped
+    panes:
+      - docker-compose up
+      - npm run start:dev
