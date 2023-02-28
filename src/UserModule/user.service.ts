@@ -13,9 +13,17 @@ export class UserService {
 
     public async createUser(input: CreateUserInputType) {
         const newUser = new UserEntity()
-        newUser.name = input.user
+        newUser.name = input.name
         newUser.password = input.password
 
         return !!(await this.userRepository.save(newUser))
+    }
+
+    public async getUsers() {
+        return await this.userRepository.find()
+    }
+
+    public async getUser(id: number) {
+        return await this.userRepository.findOne({ where: { id } })
     }
 }

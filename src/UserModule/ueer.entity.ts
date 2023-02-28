@@ -3,9 +3,9 @@ import { Column, CreateDateColumn, Entity, PrimaryColumn, PrimaryGeneratedColumn
 @Entity({ name: 'user' })
 export class UserEntity {
     @PrimaryGeneratedColumn()
-    public id: string
+    public id: number
 
-    @Column()
+    @Column({ unique: true })
     public name: string
 
     @Column()
