@@ -2,6 +2,7 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo'
 import { Module } from '@nestjs/common'
 import { GraphQLModule } from '@nestjs/graphql'
 import { TypeOrmModule } from '@nestjs/typeorm'
+import { AddressModule } from './AddressModule/address.module'
 
 import { PingModule } from './PingModule/ping.module'
 import { UserModule } from './UserModule/user.module'
@@ -27,6 +28,7 @@ import { UserModule } from './UserModule/user.module'
         }),
         PingModule,
         UserModule,
+        AddressModule,
     ],
     controllers: [],
     providers: [],

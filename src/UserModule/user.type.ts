@@ -1,4 +1,5 @@
 import { Field, InputType, Int, ObjectType } from '@nestjs/graphql'
+import { AddressType } from 'src/AddressModule/address.type'
 
 @InputType()
 export class CreateUserInputType {
@@ -25,4 +26,7 @@ export class UserType {
 
     @Field(() => Date)
     public updatedAt: Date
+
+    @Field(() => [AddressType])
+    public addresses: AddressType[]
 }
