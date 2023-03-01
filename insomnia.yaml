@@ -1,0 +1,156 @@
+_type: export
+__export_format: 4
+__export_date: 2023-03-01T09:31:39.515Z
+__export_source: insomnia.desktop.app:v2022.7.5
+resources:
+  - _id: req_17645a3429554d12bc2685a32e0b85b7
+    parentId: fld_c14ba2376704441bb2b3fdd4f02b72e7
+    modified: 1677662986772
+    created: 1677579906448
+    url: "{{ _.endpoint }}"
+    name: getUser
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"query getUser {\n\tgetUser(id: 1)
+        {\n\t\tid\n\t\tname\n\t\tpassword\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}","operationName":"getUser"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1677579906448
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_c14ba2376704441bb2b3fdd4f02b72e7
+    parentId: wrk_7a4832ce09864166b67b401e0ba448bb
+    modified: 1677662998990
+    created: 1677662980341
+    name: User
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1677662980341
+    _type: request_group
+  - _id: wrk_7a4832ce09864166b67b401e0ba448bb
+    parentId: null
+    modified: 1677487831963
+    created: 1677487831963
+    name: Lunch and Learn
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_d4c6a3d531564f5aae7f5c9bbef88627
+    parentId: fld_c14ba2376704441bb2b3fdd4f02b72e7
+    modified: 1677662991540
+    created: 1677579970406
+    url: "{{ _.endpoint }}"
+    name: getUsers
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"query getUsers {\n\tgetUsers
+        {\n\t\tid\n\t\tname\n\t\tpassword\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}","operationName":"getUsers"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1677579906423
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_06c781afbe964f5e8f63000d22f342f8
+    parentId: fld_c14ba2376704441bb2b3fdd4f02b72e7
+    modified: 1677662989802
+    created: 1677578496021
+    url: "{{ _.endpoint }}"
+    name: createUser
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"mutation CreateUser {\n\tcreateUser (input: {name: \"joran\",
+        password: \"test\"})\n}","operationName":"CreateUser"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1677579906398
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_f88b590267284fecb252805743438c79
+    parentId: wrk_7a4832ce09864166b67b401e0ba448bb
+    modified: 1677488237018
+    created: 1677487837523
+    url: "{{ _.endpoint }}"
+    name: getPingAndPong
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"query getPingAndPong {\n\tgetPingAndPong
+        {\n\t\tping\n\t\tpong\n\t}\n}\n ","operationName":"getPingAndPong"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1677487837524
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_d884ffa0d532eccaaed1d3f4856c32c8850fb962
+    parentId: wrk_7a4832ce09864166b67b401e0ba448bb
+    modified: 1677487937243
+    created: 1677487831968
+    name: Base Environment
+    data:
+      endpoint: http://localhost:3000/graphql
+    dataPropertyOrder:
+      "&":
+        - endpoint
+    color: null
+    isPrivate: false
+    metaSortKey: 1677487831968
+    _type: environment
+  - _id: jar_d884ffa0d532eccaaed1d3f4856c32c8850fb962
+    parentId: wrk_7a4832ce09864166b67b401e0ba448bb
+    modified: 1677487831970
+    created: 1677487831970
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_ce3c8ddd9ba44bfda8e44f0c38d0234d
+    parentId: wrk_7a4832ce09864166b67b401e0ba448bb
+    modified: 1677487831964
+    created: 1677487831964
+    fileName: Lunch and Learn
+    contents: ""
+    contentType: yaml
+    _type: api_spec
