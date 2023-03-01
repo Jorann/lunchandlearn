@@ -4,7 +4,6 @@ import { GraphQLModule } from '@nestjs/graphql'
 import { TypeOrmModule } from '@nestjs/typeorm'
 
 import { PingModule } from './PingModule/ping.module'
-import { UserEntity } from './UserModule/ueer.entity'
 import { UserModule } from './UserModule/user.module'
 
 @Module({
