@@ -17,7 +17,7 @@ import { UserModule } from './UserModule/user.module'
             database: 'postgres',
             autoLoadEntities: true,
             synchronize: true,
-            logging: true,
+            logging: false,
         }),
 
         GraphQLModule.forRoot<ApolloDriverConfig>({
