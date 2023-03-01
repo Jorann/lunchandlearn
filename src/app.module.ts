@@ -2,6 +2,7 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo'
 import { Module } from '@nestjs/common'
 import { GraphQLModule } from '@nestjs/graphql'
 import { TypeOrmModule } from '@nestjs/typeorm'
+import { AuthModule } from './auth/auth.module'
 
 import { PingModule } from './PingModule/ping.module'
 import { UserEntity } from './UserModule/ueer.entity'
@@ -17,7 +18,7 @@ import { UserModule } from './UserModule/user.module'
             database: 'postgres',
             autoLoadEntities: true,
             synchronize: true,
-            logging: true,
+            logging: false,
         }),
 
         GraphQLModule.forRoot<ApolloDriverConfig>({
@@ -28,6 +29,7 @@ import { UserModule } from './UserModule/user.module'
         }),
         PingModule,
         UserModule,
+        AuthModule,
     ],
     controllers: [],
     providers: [],
